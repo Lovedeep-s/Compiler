@@ -69,13 +69,10 @@
 /* First part of user prologue.  */
 #line 1 "a6-2.y"
 
-    
-    
  void yyerror(const char *msg);
-    
-    
+ 
 
-#line 79 "a6-2.tab.c"
+#line 76 "a6-2.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -499,7 +496,7 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    21,    21,    22,    23,    25,    26,    27,    28,    29
+       0,    18,    18,    19,    20,    22,    23,    24,    25,    26
 };
 #endif
 
@@ -1061,43 +1058,43 @@ yyreduce:
   switch (yyn)
     {
   case 4: /* line: exp EOL  */
-#line 23 "a6-2.y"
+#line 20 "a6-2.y"
                {printf("%d\n", (yyvsp[-1].num)); }
-#line 1067 "a6-2.tab.c"
+#line 1064 "a6-2.tab.c"
     break;
 
   case 5: /* exp: ZERO  */
-#line 25 "a6-2.y"
+#line 22 "a6-2.y"
            { (yyval.num) = 1; }
-#line 1073 "a6-2.tab.c"
+#line 1070 "a6-2.tab.c"
     break;
 
   case 6: /* exp: ONE  */
-#line 26 "a6-2.y"
+#line 23 "a6-2.y"
           { (yyval.num) = 1; }
-#line 1079 "a6-2.tab.c"
+#line 1076 "a6-2.tab.c"
     break;
 
   case 7: /* exp: exp exp  */
-#line 27 "a6-2.y"
+#line 24 "a6-2.y"
               { (yyval.num) = (yyvsp[-1].num) + (yyvsp[0].num); }
-#line 1085 "a6-2.tab.c"
+#line 1082 "a6-2.tab.c"
     break;
 
   case 8: /* exp: exp ZERO  */
-#line 28 "a6-2.y"
+#line 25 "a6-2.y"
                { (yyval.num) = (yyvsp[-1].num) + 1;  }
-#line 1091 "a6-2.tab.c"
+#line 1088 "a6-2.tab.c"
     break;
 
   case 9: /* exp: exp ONE  */
-#line 29 "a6-2.y"
+#line 26 "a6-2.y"
               { (yyval.num) = (yyvsp[-1].num) + 1; }
-#line 1097 "a6-2.tab.c"
+#line 1094 "a6-2.tab.c"
     break;
 
 
-#line 1101 "a6-2.tab.c"
+#line 1098 "a6-2.tab.c"
 
       default: break;
     }
@@ -1290,7 +1287,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 32 "a6-2.y"
+#line 29 "a6-2.y"
 
 int main(){
     yyparse();

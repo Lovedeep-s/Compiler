@@ -65,7 +65,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 7 "a6-2.y"
+#line 4 "a6-2.y"
 
     int num;
     char sym;

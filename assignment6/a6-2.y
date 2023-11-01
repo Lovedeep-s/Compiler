@@ -1,9 +1,6 @@
 %{
-    
-    
  void yyerror(const char *msg);
-    
-    %}
+ %}
 %union{
     int num;
     char sym;
@@ -12,7 +9,7 @@
 %start input
 %token ZERO ONE
 %type<num> exp
-
+%type<num> line
 %token EOL
 
 
