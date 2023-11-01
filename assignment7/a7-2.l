@@ -1,5 +1,5 @@
 %{
-     #include "a7.1.tab.h"    
+     #include "a7-2.tab.h"    
 %}
 
 
@@ -15,7 +15,3 @@
 . { }
 
 %%
-int main()
-{
-    yylex();
-}
