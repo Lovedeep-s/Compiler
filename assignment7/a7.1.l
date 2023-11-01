@@ -10,7 +10,7 @@
 1 {yylval.num =1;return ONE;} 
 
 [\t]+ {}
-"\n"           {return 0;}
+"\n"           {return EOL;}
 
 . { }
 

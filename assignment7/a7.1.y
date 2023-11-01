@@ -9,26 +9,28 @@
     char sym;
 }
 
-%start N 
+%start input 
 %token<num> ZERO ONE
-%token DOT 
 %type<num> L 
-%type<num> N K
+%type<num> N 
 %type<num> B
+%type<num> p
+%token EOL
 
 %%
-N: L {printf("\n%d", $$);} 
+input :
+|p input 
 ;
-K : B DOT L {$$=$1*(1/2)+$1;}
-
-L: L B {$$=$1*(1/2)+$2;} 
+p : N {printf("Enter Binary number = ");};
+N: L EOL {printf("solution = %d\n", $$);}
+L: L B {$$=$1*2+$2;} 
 | B {$$=$1;} 
-;
 B:ZERO {$$=$1;} 
-|ONE {$$=$1;}
+|ONE {$$=$1;}; 
 ; 
 %%
 int main(){
+    printf("Enter a binary number: ");
     yyparse();
     return 0;
 }  
